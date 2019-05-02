@@ -31,15 +31,21 @@ public class BrainGame{
         //launch(args);
         Stack<Integer> test = new Stack();
         SearchSpace simulation = new SearchSpace();
-        simulation.addNode(1, 3);
-        simulation.addNode(2, 0);
-        simulation.addNode(3, 1);
-        simulation.addNode(4, 0);
+        simulation.addNode(1, 4, 1);
+        simulation.addNode(2, 1, 1);
+        simulation.addNode(3, 1, 1);
+        simulation.addNode(4, 1, 1);
+        simulation.addNode(5, 1, 1);
         
-        simulation.addAttribute(1, 2, 2, 5);
-        simulation.addAttribute(1, 3, 4, 3);
-        simulation.addAttribute(1, 4, 1, 1);
-        simulation.addAttribute(3, 2, 3, 4);
+        simulation.addSynapse(1, 2, 2, 5);
+        simulation.addSynapse(1, 3, 4, 3);
+        simulation.addSynapse(1, 4, 1, 1);
+        simulation.addSynapse(1, 5, 3, 2);
+        simulation.addSynapse(2, 4, 5, 1);
+        simulation.addSynapse(3, 5, 2, 4);
+        simulation.addSynapse(4, 3, 4, 4);
+        simulation.addSynapse(5, 2, 4, 4);
+        
         
         System.out.println(simulation.toString());
         
@@ -49,8 +55,9 @@ public class BrainGame{
         
         //System.out.println(simulation.nextNode(1, 0));
         
-        //simulation.search(1, 2, 3);
-        //simulation.solution();
+        System.out.println("Search path from node 1 to node 5:");
+        simulation.search(1, 2);
+        simulation.solution();
         
     }
     
