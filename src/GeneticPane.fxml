@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="geneticPane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GeneticPaneController">
+    <stylesheets>
+        <URL value="@geneticpane.css" />
+    </stylesheets>
+   <children>
+      <Pane fx:id="graphPane" prefHeight="600.0" prefWidth="601.0" />
+      <ImageView fx:id="slideArrow" fitHeight="53.0" fitWidth="31.0" layoutY="274.0" onMouseClicked="#slideConsoleIn" styleClass="slide">
+         <image>
+            <Image url="@../../../../../Pictures/slide.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="controlpane" layoutX="600.0" prefHeight="600.0" prefWidth="200.0" styleClass="sidebar" stylesheets="@mycss.css">
+         <children>
+            <JFXTextField fx:id="startnode" labelFloat="true" layoutX="16.0" layoutY="108.0" promptText="&gt; Start Node" unFocusColor="WHITE" />
+            <JFXTextField fx:id="endnode" labelFloat="true" layoutX="16.0" layoutY="167.0" promptText="/ End Node" unFocusColor="WHITE" />
+            <ImageView fx:id="backbtn" fitHeight="31.0" fitWidth="34.0" layoutX="4.0" onMouseClicked="#back_program" pickOnBounds="true" preserveRatio="true" styleClass="backbtn" />
+            <ImageView fx:id="closebtn" fitHeight="31.0" fitWidth="34.0" layoutX="169.0" onMouseClicked="#close_program" pickOnBounds="true" preserveRatio="true" styleClass="closebtn" />
+            <JFXButton fx:id="searchpath1" buttonType="RAISED" layoutX="24.0" layoutY="235.0" onMouseClicked="#searchpath" prefHeight="43.0" prefWidth="153.0" ripplerFill="WHITE" styleClass="searchbtn" text="Search Path">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="tablebtn" buttonType="RAISED" layoutX="111.0" layoutY="549.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showTable" prefHeight="31.0" prefWidth="73.0" ripplerFill="WHITE" styleClass="searchbtn" text="Table">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="graphbtn" buttonType="RAISED" layoutX="20.0" layoutY="549.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showGraph" prefHeight="31.0" prefWidth="73.0" ripplerFill="WHITE" styleClass="searchbtn" text="Graph">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXButton>
+            <HBox layoutX="12.0" layoutY="313.0" spacing="15.0">
+               <children>
+                  <VBox layoutX="12.0" layoutY="315.0" spacing="13.0">
+                     <children>
+                        <Text fill="WHITE" layoutX="14.0" layoutY="331.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Population">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Text>
+                        <Text fill="WHITE" layoutX="14.0" layoutY="363.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mutation Rate">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Text>
+                        <Text fill="WHITE" layoutX="12.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Crossover Rate">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Text>
+                        <Text fill="WHITE" layoutX="12.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Elitism">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Text>
+                        <Text fill="WHITE" layoutX="17.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tournament">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Text>
+                     </children>
+                  </VBox>
+                  <VBox layoutX="122.0" layoutY="314.0" prefHeight="155.0" prefWidth="47.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="population" layoutX="122.0" layoutY="314.0" prefHeight="0.0" prefWidth="64.0" text="20">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="mutateRate" layoutX="122.0" layoutY="346.0" prefHeight="0.0" prefWidth="64.0" text="0.05">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="crossRate" layoutX="122.0" layoutY="376.0" prefHeight="0.0" prefWidth="64.0" text="0.9">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="elitism" layoutX="122.0" layoutY="408.0" prefHeight="0.0" prefWidth="64.0" text="5">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="tournament" layoutX="122.0" layoutY="440.0" prefHeight="0.0" prefWidth="64.0" text="10">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <effect>
+                              <InnerShadow />
+                           </effect>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <Rectangle fx:id="animateback" arcHeight="50.0" arcWidth="30.0" fill="WHITE" height="32.0" layoutX="30.0" layoutY="499.0" stroke="WHITE" strokeType="INSIDE" width="54.0">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Rectangle>
+            <Circle fx:id="animatebtn" fill="WHITE" layoutX="48.0" layoutY="515.0" onMouseClicked="#animateSwitch" radius="14.0" stroke="WHITE" strokeType="INSIDE">
+               <effect>
+                  <DropShadow color="#0000004c" />
+               </effect>
+            </Circle>
+            <JFXButton fx:id="searchpath2" buttonType="RAISED" layoutX="24.0" layoutY="235.0" onMouseClicked="#searching" prefHeight="43.0" prefWidth="153.0" ripplerFill="WHITE" styleClass="searchbtn" text="Searching..." visible="false">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <ScrollPane fx:id="consolePane" layoutX="-317.0" prefHeight="600.0" prefWidth="317.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="315.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#081e36" height="43.0" layoutX="-8.0" layoutY="-2.0" stroke="#42c5f4" strokeType="INSIDE" width="324.0" />
+                  <Text fill="WHITE" layoutX="115.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Console">
+                     <font>
+                        <Font name="System Bold" size="21.0" />
+                     </font>
+                  </Text>
+                  <Rectangle fx:id="minimizeC" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="3.0" layoutX="288.0" layoutY="20.0" onMouseClicked="#slideConsoleOut" stroke="#42c5f4" strokeType="INSIDE" styleClass="changecolor" width="15.0" />
+                  <TextArea fx:id="console" layoutY="40.0" prefHeight="560.0" prefWidth="317.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

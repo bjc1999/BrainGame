@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="content_area" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@mycss.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FXMLDocumentController">
+   <children>
+      <VBox layoutX="-4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0" />
+      <Label layoutX="82.0" layoutY="352.0" text="Brain Game" textFill="WHITE">
+         <font>
+            <Font name="Futura Bold Condensed BT" size="50.0" />
+         </font>
+      </Label>
+      <Label layoutX="482.0" layoutY="108.0" text="Search Method">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="closebtn" fitHeight="29.0" fitWidth="26.0" layoutX="756.0" layoutY="-5.0" onMouseClicked="#close_program" pickOnBounds="true" preserveRatio="true" styleClass="closebtn" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <ImageView fitHeight="222.0" fitWidth="229.0" layoutX="92.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" styleClass="logo" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="133.0" layoutX="484.0" layoutY="340.0" opacity="0.0" stroke="#02001e" strokeType="INSIDE" strokeWidth="5.0" width="229.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <ImageView fx:id="geneticSearch" fitHeight="123.0" fitWidth="220.0" layoutX="489.0" layoutY="345.0" onMouseClicked="#run_search" onMouseEntered="#searchBEnt" styleClass="animate" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="133.0" layoutX="483.0" layoutY="182.0" opacity="0.0" stroke="#02001e" strokeType="INSIDE" strokeWidth="5.0" styleClass="searchtypeA" width="229.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </Rectangle>
+      <Text fill="WHITE" layoutX="493.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genetic Algorithm">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow color="#00bfff" />
+         </effect>
+      </Text>
+      <ImageView fx:id="normalSearch" fitHeight="123.0" fitWidth="220.0" layoutX="487.0" layoutY="192.0" onMouseClicked="#run_search" onMouseEntered="#searchAEnt" styleClass="normal" />
+      <Text fill="WHITE" layoutX="494.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Algorithm">
+         <effect>
+            <DropShadow color="#00bfff" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

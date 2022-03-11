@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="tablepane" prefHeight="600.0" prefWidth="800.0" styleClass="mainFxmlClass" stylesheets="@Tablecss.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TableController">
+   <children>
+      <JFXTabPane layoutX="56.0" layoutY="293.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Neuron">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="neuronTab" prefHeight="563.0" prefWidth="800.0" stylesheets="@Tablecss.css">
+                          <columns>
+                            <TableColumn fx:id="nodeID" prefWidth="249.0" text="ID" />
+                            <TableColumn fx:id="numConnection" minWidth="0.0" prefWidth="304.0" text="Number of Connection" />
+                              <TableColumn fx:id="lifetime" prefWidth="246.0" text="Lifetime" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Connections">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="synapseTab" prefHeight="563.0" prefWidth="800.0">
+                          <columns>
+                            <TableColumn fx:id="source" prefWidth="199.0" text="Source" />
+                            <TableColumn fx:id="destination" prefWidth="213.0" text="Destination" />
+                              <TableColumn fx:id="time" minWidth="0.0" prefWidth="185.0" text="Time" />
+                              <TableColumn fx:id="distance" prefWidth="202.0" text="Distance" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <ImageView fx:id="closebtn" fitHeight="32.0" fitWidth="33.0" layoutX="767.0" onMouseClicked="#closeButtonAction" pickOnBounds="true" preserveRatio="true" styleClass="closebtn" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0" />
+      <AnchorPane layoutX="195.0" prefHeight="38.0" prefWidth="556.0" />
+   </children>
+</AnchorPane>

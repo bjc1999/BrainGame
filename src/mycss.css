@@ -1,0 +1,116 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 5, 2019, 5:30:22 PM
+    Author     : Jasmoon
+*/
+.sidebar{
+    -fx-background-color: #42c5f4;
+}
+
+.closebtn{
+    -fx-image: url("/res/closebtn.png");
+    -fx-opacity: 0.5;
+ 
+}
+
+.closebtn:hover{
+    -fx-image: url("/res/closebtnred.png");
+    -fx-opacity: 1;  
+}
+
+.animate{
+    -fx-image: url("/res/genetic.jpg");
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10,0,0,0);;
+}
+
+.animate:hover{
+    -fx-image: url("/res/geneticmov.gif");
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10,0,0,0);
+}
+
+.normal{
+    -fx-image: url("/res/normal.jpg");
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10,0,0,0);
+}
+
+.normal:hover{
+    -fx-image: url("/res/normalmov.gif");
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10,0,0,0);
+}
+
+.backbtn{
+    -fx-image: url("/res/backbtn.png");
+    -fx-opacity: 0.5;
+ 
+}
+
+.backbtn:hover{
+    -fx-image: url("/res/backbtnred.png");
+    -fx-opacity: 1;  
+}
+
+.runbtn{
+   -fx-background-color: #42c5f4;
+   -fx-text-fill: #ffffff;
+   -fx-background-radius: 3px;
+}
+
+.runbtn:hover{
+   -fx-background-color: transparent;
+   -fx-background-radius: 3px;
+   -fx-text-fill: #42c5f4;
+   -fx-border-color: #42c5f4;
+   -fx-border-width: 1px;
+   -fx-border-style: solid;
+   -fx-border-radius: 3px;
+}
+
+.searchchckbox{
+   -fx-background-color: #42c5f4;
+   -fx-text-fill: #ffffff;
+}
+
+.searchchckbox:pressed{
+   -fx-background-color: transparent;
+   -fx-text-fill: #42c5f4;
+   -fx-border-color: #42c5f4;
+   -fx-border-width: 1px;
+   -fx-border-style: solid;
+   /* -fx-animated:true */
+       
+}
+
+.searchbtn{
+    
+   -fx-background-color: #ffffff;
+   -fx-text-fill: #42c5f4;
+   -fx-background-radius: 3px;
+}
+
+.searchbtn:hover{
+   -fx-background-color: transparent;
+   -fx-background-radius: 3px;
+   -fx-text-fill: #ffffff;
+   -fx-border-color: #ffffff;
+   -fx-border-width: 1px;
+   -fx-border-style: solid;
+   -fx-border-radius: 3px;
+}
+
+.logo{
+    -fx-image: url("/res/logo.png");
+}
+
+.searchtypeB{
+   -fx-image: url("/res/normal.jpg");
+   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10,0,0,0);
+}
+
+.searchtypeB:hover{
+   -fx-image: url("/res/normalmov.gif");
+   -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}

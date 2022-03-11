@@ -1,0 +1,21 @@
+
+.mainFxmlClass {
+
+}
+
+.slide{
+    -fx-image: url("/res/slide.png");
+    -fx-opacity: 0.5;
+}
+
+.slide:hover{
+    -fx-opacity: 1;
+}
+
+.changecolor{
+    -fx-stroke: #42c5f4;
+}
+
+.changecolor:hover{
+    -fx-stroke: white;
+}

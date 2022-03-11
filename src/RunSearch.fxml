@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RunSearchController">
+    <stylesheets>
+        <URL value="@runsearch.css" />
+    </stylesheets>
+   <children>
+      <ImageView fitHeight="607.0" fitWidth="987.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" styleClass="anchorpanebckgrd" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../res/dynamic.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="4.0" onMouseClicked="#back_to_main" pickOnBounds="true" preserveRatio="true" styleClass="backbtn" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" />
+      <Label fx:id="header2" layoutX="187.0" layoutY="25.0" styleClass="header" AnchorPane.topAnchor="5.0">
+         <font>
+            <Font size="45.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="7.0" offsetY="5.0" />
+         </effect>
+      </Label>
+      <Label fx:id="inputlbl" layoutX="67.0" layoutY="190.0" text="Input" textFill="WHITE">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="searchbtn" buttonType="RAISED" layoutX="610.0" layoutY="524.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#searchPath" prefHeight="50.0" prefWidth="156.0" ripplerFill="WHITE" styleClass="searchbtn" text="Search" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="noNeuron" focusColor="#3765f2" labelFloat="true" layoutX="67.0" layoutY="152.0" onMouseClicked="#checkModeSelected" promptText="Number of neurons" styleClass="textfield" unFocusColor="WHITE" />
+      <VBox fx:id="vbox1" layoutX="67.0" layoutY="280.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="ConnectedNeuron" focusColor="#3765f2" labelFloat="true" layoutX="466.0" layoutY="277.0" promptText="Connected Neuron" styleClass="textfield" unFocusColor="WHITE" />
+            <JFXTextField fx:id="Lifetime" focusColor="#3765f2" labelFloat="true" layoutX="466.0" layoutY="324.0" prefHeight="21.0" prefWidth="169.0" promptText="Lifetime" styleClass="textfield" unFocusColor="WHITE" />
+         </children>
+      </VBox>
+      <HBox layoutX="66.0" layoutY="99.0" spacing="30.0">
+         <children>
+            <JFXRadioButton fx:id="manualMode" layoutX="75.0" layoutY="190.0" onMouseClicked="#modeSelection" styleClass="optionbtn" text="Manual">
+               <toggleGroup>
+                  <ToggleGroup fx:id="modeSelection" />
+               </toggleGroup>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="autoMode" layoutX="210.0" layoutY="195.0" onMouseClicked="#modeSelection" styleClass="optionbtn" text="Auto" toggleGroup="$modeSelection" />
+         </children>
+      </HBox>
+      <Label fx:id="ID" layoutX="69.0" layoutY="240.0" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <VBox fx:id="vbox2" layoutX="344.0" layoutY="280.0" spacing="20.0">
+         <children>
+            <JFXTextField fx:id="connectedID" focusColor="#3765f2" labelFloat="true" layoutX="332.0" layoutY="280.0" promptText="Connected ID" styleClass="textfield" unFocusColor="WHITE" />
+            <JFXTextField fx:id="time" focusColor="#3765f2" labelFloat="true" layoutX="332.0" layoutY="321.0" promptText="Time" styleClass="textfield" unFocusColor="WHITE" />
+            <JFXTextField fx:id="distance" focusColor="#3765f2" labelFloat="true" layoutX="332.0" layoutY="362.0" promptText="Distance" styleClass="textfield" unFocusColor="WHITE" />
+         </children>
+      </VBox>
+      <JFXButton fx:id="sub1" buttonType="RAISED" layoutX="69.0" layoutY="383.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#submit1" prefHeight="30.0" prefWidth="85.0" ripplerFill="WHITE" styleClass="searchbtn" text="Submit">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="sub2" buttonType="RAISED" layoutX="344.0" layoutY="438.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#submit2" prefHeight="30.0" prefWidth="85.0" ripplerFill="WHITE" styleClass="searchbtn" text="Submit">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="tablebtn" buttonType="RAISED" layoutX="279.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#showTable" prefHeight="31.0" prefWidth="73.0" ripplerFill="WHITE" styleClass="searchbtn" text="Table">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
