@@ -12,7 +12,7 @@ The list of path searching algorithm covered in this program are:
 
 ## Getting Started
 
-**This program only works in JavaSE 1.8**
+**This program only compatible with JavaSE 1.8**
 
 Here is a guideline to help you get started to run this program.
 1. Clone this repository
